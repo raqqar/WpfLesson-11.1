@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfLesson_11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLesson_11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="200">
+
+    <Grid Margin="0,0,0,-1">
+        <Path Fill="Red"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,-25,0,0" Stroke="Black">
+            <Path.Data>
+                <GeometryGroup FillRule="Nonzero" >
+                    <CombinedGeometry  GeometryCombineMode="Union">
+                        <CombinedGeometry.Geometry1>
+                            <CombinedGeometry>
+                                <CombinedGeometry.Geometry1>
+                                    <RectangleGeometry x:Name="rectangle" Rect="-50,135,100,15"  >
+                                        <RectangleGeometry.Transform>
+                                            <RotateTransform Angle="-45"/>
+                                        </RectangleGeometry.Transform>
+                                    </RectangleGeometry>
+                                </CombinedGeometry.Geometry1>
+                            </CombinedGeometry>
+                        </CombinedGeometry.Geometry1>
+                        <CombinedGeometry.Geometry2>
+                            <CombinedGeometry GeometryCombineMode="Xor">
+                                <CombinedGeometry.Geometry1>
+                                    <EllipseGeometry Center="100,100"  RadiusX="45" RadiusY="45"/>
+                                </CombinedGeometry.Geometry1>
+                                <CombinedGeometry.Geometry2>
+                                    <EllipseGeometry Center="100,100"  RadiusX="60" RadiusY="60"/>
+                                </CombinedGeometry.Geometry2>
+                            </CombinedGeometry>
+                        </CombinedGeometry.Geometry2>
+                    </CombinedGeometry>
+                </GeometryGroup>
+            </Path.Data>
+        </Path>
+    </Grid>
+</Window>
